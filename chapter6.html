@@ -1,0 +1,988 @@
+
+
+<html>
+  <head>
+    <title>Programming in C</title>
+    <link rel="stylesheet" href="index.css" >
+  </head>
+  <body>
+    <style>
+      /* Base styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+/* TOC container styles */
+#TOC {
+  background-color: #e0f7fa;
+  border: 2px solid #00acc1;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  margin: 30px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* TOC heading */
+#TOC h2 {
+  color: #006064;
+  margin-top: 0;
+}
+
+/* Top-level list */
+#TOC ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Chapters */
+#TOC > ul > li {
+  margin-bottom: 15px;
+}
+
+/* Chapter links */
+#TOC > ul > li > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #004d40;
+  display: block;
+  padding: 10px;
+  background-color: #b2ebf2;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#TOC > ul > li > a:hover {
+  background-color: #4dd0e1;
+}
+
+/* Subtopic list inside each chapter */
+#TOC li ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+/* Subtopic links */
+#TOC li ul li a {
+  text-decoration: none;
+  color: #00695c;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+#TOC li ul li a:hover {
+  background-color: #80deea;
+}
+
+    </style>
+    <div id="main">
+      <div id="TOC">
+        <h2>Topics</h2>
+       
+        <ul>
+          <li><a href="syllabus.html">Home</a></li>
+          <li><a href="#intro-c">Introduction to C</a></li>
+          <li><a href="#features-c">Features of C</a></li>
+          <li><a href="#structure-c">Structure of a C Program</a></li>
+          <li><a href="#preprocessors">C Preprocessors and Header Files</a></li>
+          <li><a href="#characters-c">Characters Used in C</a></li>
+          <li><a href="#comments">Comments in C</a></li>
+          <li><a href="#identifiers">Identifiers in C</a></li>
+          <li><a href="#keywords">Keywords in C</a></li>
+          <li><a href="#tokens">Tokens in C</a></li>
+          <li><a href="#data-types">Data Types in C</a></li>
+          <li><a href="#constants-variables">Constants and Variables</a></li>
+          <li><a href="#type-specifiers">Type Specifiers</a></li>
+          <li><a href="#statements">Simple and Compound Statements</a></li>
+          <li><a href="#arithmetic">Arithmetic Operators</a></li>
+          <li><a href="#relational">Relational Operators</a></li>
+          <li><a href="#logical">Logical Operators</a></li>
+          <li><a href="#assignment">Assignment Operators</a></li>
+          <li><a href="#unary">Unary Operators</a></li>
+          <li><a href="#conditional">Conditional Operator</a></li>
+          <li><a href="#io">I/O Functions</a></li>
+          <li><a href="#if">if Statement</a></li>
+          <li><a href="#ifelse">if-else Statement</a></li>
+          <li><a href="#elseif">if-else if-else Statement</a></li>
+          <li><a href="#nested">Nested if Statement</a></li>
+          <li><a href="#switch">Switch Statement</a></li>
+          <li><a href="#iteration">Iteration Control Statements</a></li>
+          <li><a href="#array">Array Definition and Types</a></li>
+          <li><a href="#matrix">Matrix Addition and Subtraction</a></li>
+          <li><a href="#string">String Library Functions</a></li>
+        </ul>
+      </div>
+
+      <div id="details">
+        <h1 id="intro-c">Introduction to C</h1>
+        <p>
+          <strong>C</strong> is a general-purpose, procedural programming
+          language developed by Dennis Ritchie in 1972 at Bell Labs. It is one
+          of the most widely used programming languages and serves as the
+          foundation for many modern languages like C++, Java, and Python.
+        </p>
+        <p>
+          C is known for its simplicity, efficiency, and flexibility. It is used
+          for system programming, embedded systems, game development, and more.
+        </p>
+
+        <h1 id="features-c">Features of C</h1>
+        <p>
+          C has several features that make it a powerful and popular programming
+          language:
+        </p>
+        <ul>
+          <li>
+            <strong>Procedural Language</strong>: Follows a step-by-step
+            procedural approach.
+          </li>
+          <li>
+            <strong>Portability</strong>: Programs written in C can run on
+            different platforms with minimal changes.
+          </li>
+          <li>
+            <strong>Efficiency</strong>: Provides low-level access to memory and
+            hardware.
+          </li>
+          <li>
+            <strong>Modularity</strong>: Supports functions and libraries for
+            code reusability.
+          </li>
+          <li>
+            <strong>Extensibility</strong>: Allows the addition of new features
+            and libraries.
+          </li>
+        </ul>
+
+        <h1 id="structure-c">Structure of a C Program</h1>
+        <p>A C program typically consists of the following components:</p>
+        <pre>
+                <code>
+#include &ltstdio.h&gt // Preprocessor directive
+
+int main() { // Main function
+    printf("Hello, World!"); // Statement
+    return 0; // Return statement
+}
+                </code>
+            </pre>
+        <h3>Components of a C Program</h3>
+        <ul>
+          <li>
+            <strong>Preprocessor Directives</strong>: Includes header files
+            (e.g., <code>#include &ltstdio.h&gt</code>).
+          </li>
+          <li>
+            <strong>Main Function</strong>: Entry point of the program (<code
+              >int main()</code
+            >).
+          </li>
+          <li>
+            <strong>Statements</strong>: Instructions to perform tasks (e.g.,
+            <code>printf("Hello, World!");</code>).
+          </li>
+          <li>
+            <strong>Return Statement</strong>: Indicates the end of the program
+            (<code>return 0;</code>).
+          </li>
+        </ul>
+
+        <h1 id="preprocessors">C Preprocessors and Header Files</h1>
+        <p>
+          <strong>Preprocessors</strong> are directives that instruct the
+          compiler to preprocess the source code before compilation. They begin
+          with a <code>#</code> symbol.
+        </p>
+        <h3>Common Preprocessor Directives</h3>
+        <ul>
+          <li>
+            <strong>#include</strong>: Includes header files (e.g.,
+            <code>#include &ltstdio.h&gt</code>).
+          </li>
+        </ul>
+        <h3>Header Files</h3>
+        <p>
+          Header files (e.g., <code>stdio.h</code>) contain function
+          declarations and macros. They are included using the
+          <code>#include</code> directive.
+        </p>
+
+        <h1 id="characters-c">Characters Used in C</h1>
+        <p>C uses the following types of characters:</p>
+        <ul>
+          <li><strong>Letters</strong>: A-Z, a-z</li>
+          <li><strong>Digits</strong>: 0-9</li>
+          <li>
+            <strong>Special Characters</strong>:
+            <code
+              >! @ # $ % ^ & * ( ) _ + - = { } [ ] | \ : ; " ' < > , . ? /</code
+            >
+          </li>
+          <li><strong>Whitespace</strong>: Spaces, tabs, and newlines.</li>
+        </ul>
+
+        <h1 id="comments">Comments in C</h1>
+        <p>
+          <strong>Comments</strong> are used to explain code and make it more
+          readable. They are ignored by the compiler.
+        </p>
+        <h3>Types of Comments</h3>
+        <ul>
+          <li>
+            <strong>Single-Line Comments</strong>: Start with <code>//</code>.
+          </li>
+          <pre>
+                    <code>
+// This is a single-line comment
+                    </code>
+                </pre>
+          <li>
+            <strong>Multi-Line Comments</strong>: Enclosed in
+            <code>/* ... */</code>.
+          </li>
+          <pre>
+                    <code>
+/* This is a
+   multi-line comment */
+                    </code>
+                </pre>
+        </ul>
+
+        <h1 id="identifiers">Identifiers in C</h1>
+        <p>
+          <strong>Identifiers</strong> are names given to variables, functions,
+          arrays, etc. They must follow these rules:
+        </p>
+        <ul>
+          <li>
+            Can contain letters, digits, and underscores (<code>_</code>).
+          </li>
+          <li>Must begin with a letter or underscore.</li>
+          <li>Cannot be a keyword.</li>
+          <li>Are case-sensitive.</li>
+        </ul>
+        <h3>Example of Identifiers</h3>
+        <pre>
+                <code>
+int age; // "age" is an identifier
+float salary; // "salary" is an identifier
+                </code>
+            </pre>
+
+        <h1 id="keywords">Keywords in C</h1>
+        <p>
+          <strong>Keywords</strong> are reserved words in C that have special
+          meanings. They cannot be used as identifiers.
+        </p>
+        <h3>Common Keywords</h3>
+        <pre>
+                <code>
+int, float, char, if, else, for, while, return, void, struct, etc.
+                </code>
+            </pre>
+        <img
+          src="https://preview.redd.it/some-fixed-keywords-in-c-programming-language-v0-ypx9ul7yzt2b1.png?auto=webp&s=731816ad00aed4cc796c4bd2d1f6791f58cf6bf0"
+          alt="Keywords in C"
+        />
+        <h1 id="tokens">Tokens in C</h1>
+        <p>
+          All the things written in code are tokens.
+          <strong>Tokens</strong> are the smallest individual units in a C
+          program. They include:
+        </p>
+        <ul>
+          <li>
+            <strong>Keywords</strong>: Reserved words (e.g., <code>int</code>,
+            <code>return</code>).
+          </li>
+          <li>
+            <strong>Identifiers</strong>: Names of variables, functions, etc.
+          </li>
+          <li>
+            <strong>Constants</strong>: Fixed values (e.g., <code>10</code>,
+            <code>3.14</code>).
+          </li>
+          <li>
+            <strong>Strings</strong>: Sequence of characters (e.g.,
+            <code>"Hello"</code>).
+          </li>
+          <li>
+            <strong>Operators</strong>: Symbols for operations (e.g.,
+            <code>+</code>, <code>-</code>).
+          </li>
+          <li>
+            <strong>Special Symbols</strong>: Punctuation marks (e.g.,
+            <code>;</code>, <code>{</code>).
+          </li>
+        </ul>
+        <h1 id="data-types">Data Types in C</h1>
+        <p>
+          <strong>Data types</strong> define the type of data a variable can
+          hold. C supports the following basic data types:
+        </p>
+        <ul>
+          <li>
+            <strong>int</strong>: Integer values (e.g.,
+            <code>int age = 25;</code>).
+          </li>
+          <li>
+            <strong>float</strong>: Floating-point numbers (e.g.,
+            <code>float pi = 3.14;</code>).
+          </li>
+          <li>
+            <strong>char</strong>: Single characters (e.g.,
+            <code>char grade = 'A';</code>).
+          </li>
+          <li>
+            <strong>double</strong>: Double-precision floating-point numbers
+            (e.g., <code>double salary = 45000.50;</code>).
+          </li>
+          <li>
+            <strong>void</strong>: Represents no value (used in functions and
+            pointers).
+          </li>
+        </ul>
+
+        <h1 id="constants-variables">Constants and Variables</h1>
+        <p>
+          <strong>Variables</strong> are used to store data that can change
+          during program execution. <strong>Constants</strong> are fixed values
+          that cannot be changed.
+        </p>
+        <h3>Variables</h3>
+        <pre>
+                <code>
+int age = 25; // Variable declaration and initialization
+age = 30;    // Value can be changed
+                </code>
+            </pre>
+        <h3>Constants</h3>
+        <pre>
+                <code>
+const float PI = 3.14; // Constant declaration
+// PI = 3.15; // Error: Cannot change a constant
+                </code>
+            </pre>
+
+        <h1 id="type-specifiers">Type Specifiers</h1>
+        <p>
+          <strong>Type specifiers</strong> modify the basic data types to
+          provide more control over their size and behavior. Common type
+          specifiers include:
+        </p>
+        <ul>
+          <li>
+            <strong>short</strong>: Reduces the size of <code>int</code> (e.g.,
+            <code>short int x;</code>).
+          </li>
+          <li>
+            <strong>long</strong>: Increases the size of <code>int</code> or
+            <code>double</code> (e.g., <code>long int y;</code>).
+          </li>
+          <li>
+            <strong>signed</strong>: Allows positive and negative values
+            (default).
+          </li>
+          <li>
+            <strong>unsigned</strong>: Allows only positive values (e.g.,
+            <code>unsigned int z;</code>).
+          </li>
+        </ul>
+
+        <h1 id="statements">Simple and Compound Statements</h1>
+        <p>
+          <strong>Statements</strong> are instructions that perform actions in a
+          program.
+        </p>
+        <h3>Simple Statements</h3>
+        <p>A single instruction ending with a semicolon (<code>;</code>).</p>
+        <pre>
+                <code>
+int x = 10; // Simple statement
+                </code>
+            </pre>
+        <h3>Compound Statements</h3>
+        <p>
+          A block of statements enclosed in curly braces (<code>{ }</code>).
+        </p>
+        <pre>
+                <code>
+if (x > 5) { // Compound statement
+    printf("x is greater than 5");
+    x = x + 1;
+}
+                </code>
+            </pre>
+        <h1 id="arithmetic">Arithmetic Operators</h1>
+        <p>
+          <strong>Arithmetic operators</strong> are used to perform mathematical
+          operations like addition, subtraction, multiplication, division, and
+          modulus.
+        </p>
+        <h3>Common Arithmetic Operators</h3>
+        <ul>
+          <li><code>+</code>: Addition</li>
+          <li><code>-</code>: Subtraction</li>
+          <li><code>*</code>: Multiplication</li>
+          <li><code>/</code>: Division</li>
+          <li><code>%</code>: Modulus (remainder)</li>
+        </ul>
+        <h3>Example</h3>
+        <pre>
+                <code>
+int a = 10, b = 3;
+int sum = a + b; // 13
+int difference = a - b; // 7
+int product = a * b; // 30
+int quotient = a / b; // 3
+int remainder = a % b; // 1
+                </code>
+            </pre>
+
+        <h1 id="relational">Relational Operators</h1>
+        <p>
+          <strong>Relational operators</strong> are used to compare two values.
+          They return a boolean result (<code>1</code> for true,
+          <code>0</code> for false).
+        </p>
+        <h3>Common Relational Operators</h3>
+        <ul>
+          <li><code>==</code>: Equal to</li>
+          <li><code>!=</code>: Not equal to</li>
+          <li><code>></code>: Greater than</li>
+          <li><code><</code>: Less than</li>
+          <li><code>>=</code>: Greater than or equal to</li>
+          <li><code><=</code>: Less than or equal to</li>
+        </ul>
+        <h3>Example</h3>
+        <pre>
+                <code>
+int a = 10, b = 20;
+int result1 = (a == b); // 0 (false)
+int result2 = (a < b);  // 1 (true)
+                </code>
+            </pre>
+
+        <h1 id="logical">Logical Operators</h1>
+        <p>
+          <strong>Logical operators</strong> are used to combine multiple
+          conditions. They return a boolean result (<code>1</code> for true,
+          <code>0</code> for false).
+        </p>
+        <h3>Common Logical Operators</h3>
+        <ul>
+          <li><code>&&</code>: Logical AND</li>
+          <li><code>||</code>: Logical OR</li>
+          <li><code>!</code>: Logical NOT</li>
+        </ul>
+        <h3>Example</h3>
+        <pre>
+                <code>
+int a = 1, b = 0;
+int result1 = (a && b); // 0 (false)
+int result2 = (a || b); // 1 (true)
+int result3 = !a;       // 0 (false)
+                </code>
+            </pre>
+
+        <h1 id="assignment">Assignment Operators</h1>
+        <p>
+          <strong>Assignment operators</strong> are used to assign values to
+          variables. They can also perform operations while assigning.
+        </p>
+        <h3>Common Assignment Operators</h3>
+        <ul>
+          <li><code>=</code>: Simple assignment</li>
+          <li><code>+=</code>: Add and assign</li>
+          <li><code>-=</code>: Subtract and assign</li>
+          <li><code>*=</code>: Multiply and assign</li>
+          <li><code>/=</code>: Divide and assign</li>
+          <li><code>%=</code>: Modulus and assign</li>
+        </ul>
+        <h3>Example</h3>
+        <pre>
+                <code>
+int a = 10;
+a += 5; // a = 15
+a -= 3; // a = 12
+a *= 2; // a = 24
+a /= 4; // a = 6
+a %= 5; // a = 1
+                </code>
+            </pre>
+
+        <h1 id="unary">Unary Operators</h1>
+        <p>
+          <strong>Unary operators</strong> operate on a single operand. They are
+          used to perform operations like increment, decrement, and negation.
+        </p>
+        <h3>Common Unary Operators</h3>
+        <ul>
+          <li><code>++</code>: Increment</li>
+          <li><code>--</code>: Decrement</li>
+          <li><code>-</code>: Negation</li>
+          <li><code>!</code>: Logical NOT</li>
+        </ul>
+        <h3>Example</h3>
+        <pre>
+                <code>
+int a = 5;
+a++; // a = 6
+a--; // a = 5
+int b = -a; // b = -5
+int c = !a; // c = 0 (false)
+                </code>
+            </pre>
+
+        <h1 id="conditional">Conditional Operator</h1>
+        <p>
+          The <strong>conditional operator</strong> (<code>? :</code>) is a
+          ternary operator used for decision-making. It evaluates a condition
+          and returns one of two values based on the result.
+        </p>
+        <h3>Syntax</h3>
+        <pre>
+                <code>
+condition ? expression1 : expression2;
+                </code>
+            </pre>
+        <h3>Example</h3>
+        <pre>
+                <code>
+                  int a = 10, b = 20;
+                  int max = (a > b) ? a : b;
+                  printf("%d is greater\n", max);
+                  
+                </code>
+            </pre>
+        <h1 id="io">I/O Functions</h1>
+        <p>
+          Input and output functions allow interaction with the user. Common
+          functions are <code>printf</code> for output and
+          <code>scanf</code> for input.
+        </p>
+        <h3>Example</h3>
+        <pre>
+            <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("You entered: %d", num);
+    return 0;
+}
+            </code>
+        </pre>
+
+        <h1 id="if">if Statement</h1>
+        <p>
+          The <code>if</code> statement executes a block of code if a specified
+          condition is true.
+        </p>
+        <h3>Example</h3>
+        <pre>
+            <code>
+int a = 10;
+if (a > 5) {
+    printf("a is greater than 5\n");
+}
+            </code>
+        </pre>
+
+        <h1 id="ifelse">if-else Statement</h1>
+        <p>
+          The <code>if-else</code> statement allows for one block of code to
+          execute if the condition is true and another if it is false.
+        </p>
+        <h3>Example</h3>
+        <pre>
+            <code>
+int a = 10;
+if (a > 15) {
+    printf("a is greater than 15\n");
+} else {
+    printf("a is not greater than 15\n");
+}
+            </code>
+        </pre>
+
+        <h1 id="elseif">if-else if-else Statement</h1>
+        <p>
+          This statement allows multiple conditions to be checked sequentially.
+        </p>
+        <h3>Example</h3>
+        <pre>
+            <code>
+int a = 10;
+if (a > 20) {
+    printf("a is greater than 20\n");
+} else if (a > 10) {
+    printf("a is greater than 10 but not 20\n");
+} else {
+    printf("a is 10 or less\n");
+}
+            </code>
+        </pre>
+
+        <h1 id="nested">Nested if Statement</h1>
+        <p>
+          A nested <code>if</code> statement allows an <code>if</code> statement
+          <code>if</code>. It works like and operator. inside another
+        </p>
+        <h3>Example</h3>
+        <pre>
+            <code>
+int a = 10, b = 20;
+if (a < 20) {
+    if (b > 15) {
+        printf("Both conditions are true\n");
+    }
+}
+            </code>
+        </pre>
+
+        <h1 id="switch">Switch Statement</h1>
+        <p>
+          The <code>switch</code> statement allows multiple cases to be checked
+          based on an expression. It also takes a default value.
+        </p>
+        <h3>Example</h3>
+        <pre>
+            <code>
+int day = 3;
+switch (day) {
+    case 1:
+        printf("Monday\n");
+        break;
+    case 2:
+        printf("Tuesday\n");
+        break;
+    case 3:
+        printf("Wednesday\n");
+        break;
+    default:
+        printf("Other day\n");
+}
+            </code>
+        </pre>
+        <h1 id="iteration">Iteration Control Statements</h1>
+        <p>Loops are used to execute a block of code repeatedly.</p>
+        <h3>While Loop</h3>
+        <pre>
+            <code>
+int i = 1;
+while (i <= 5) {
+    printf("%d\n", i);
+    i++;
+}
+            </code>
+        </pre>
+        <div class="output">1 2 3 4 5</div>
+
+        <h3>Do-While Loop</h3>
+        <pre>
+            <code>
+int i = 1;
+do {
+    printf("%d\n", i);
+    i++;
+} while (i <= 5);
+            </code>
+        </pre>
+        <div class="output">1 2 3 4 5</div>
+
+        <h3>For Loop</h3>
+        <pre>
+            <code>
+for (int i = 1; i <= 5; i++) {
+    printf("%d\n", i);
+}
+            </code>
+        </pre>
+        <div class="output">1 2 3 4 5</div>
+
+     
+        <h1 id="array">Array Definition and Types</h1>
+        <p>Arrays are used to store multiple values in a single variable.</p>
+        <h3>1D Array</h3>
+        <pre>
+            <code>
+int arr[5] = {1, 2, 3, 4, 5};
+            </code>
+        </pre>
+        <div class="output">1 2 3 4 5</div>
+
+        <h3>2D Array</h3>
+        <pre>
+            <code>
+int matrix[2][2] = {{1, 2}, {3, 4}};
+            </code>
+        </pre>
+        <div class="output">1 2<br>3 4</div>
+
+        
+        <h1 id="matrix">Matrix Addition and Subtraction</h1>
+        <p>Operations on two matrices.</p>
+        <h3>Matrix Addition</h3>
+        <pre>
+            <code>
+int A[2][2] = {{1, 2}, {3, 4}};
+int B[2][2] = {{5, 6}, {7, 8}};
+int C[2][2];
+
+for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 2; j++) {
+        C[i][j] = A[i][j] + B[i][j];
+        printf("%d ", C[i][j]);
+    }
+    printf("\n");
+}
+            </code>
+        </pre>
+        <div class="output">6 8<br>10 12</div>
+
+        <h3>Matrix Subtraction</h3>
+        <pre>
+            <code>
+for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 2; j++) {
+        C[i][j] = A[i][j] - B[i][j];
+        printf("%d ", C[i][j]);
+    }
+    printf("\n");
+}
+            </code>
+        </pre>
+        <div class="output">-4 -4<br>-4 -4</div>
+        <h1 id="string">String Library Functions</h1>
+        <p>Common string manipulation functions from <code>string.h</code>.</p>
+        <h3>Examples</h3>
+<pre>
+            <code>
+        #include <string.h>
+          #include <stdio.h>
+          
+          char str1[20] = "Hello";
+          char str2[20] = "World";
+          
+          printf("%lu\n", strlen(str1));
+          strcat(str1, str2);
+          printf("%s\n", str1);
+          printf("%d\n", strcmp("Hello", "Hello"));
+          strcpy(str1, str2);
+          printf("%s\n", str1);
+          strrev(str2);
+          printf("%s\n", str2);
+          strlwr(str2);
+          printf("%s\n", str2);
+          strupr(str2);
+          printf("%s\n", str2);
+                      </code>
+                  </pre>
+                  <div class="output">5<br>HelloWorld<br>0<br>World<br>dlroW<br>dlrow<br>DLROW</div>
+                  <h1>Programming in C - Grade 11 Questions & Answers</h1>
+
+<div class="question">
+    <h2>1. What is C programming?</h2>
+    <div class="answer">
+        <p>C is a general-purpose, procedural programming language developed by Dennis Ritchie in 1972. It is widely used for system programming, game development, and embedded systems.</p>
+        <p>C is known for its efficiency, portability, and use of structured programming techniques.</p>
+    </div>
+</div>
+
+<div class="question">
+    <h2>2. What are the basic features of C?</h2>
+    <div class="answer">
+        <p>C has several important features:</p>
+        <ul>
+            <li><b>Simple and Efficient</b>: Provides direct control over hardware.</li>
+            <li><b>Portable</b>: Code can be compiled on different platforms.</li>
+            <li><b>Structured Language</b>: Uses functions and loops for better organization.</li>
+            <li><b>Supports Low-level Manipulation</b>: Allows direct access to memory.</li>
+            <li><b>Fast Execution</b>: Used in performance-critical applications.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>3. What is the basic structure of a C program?</h2>
+    <div class="answer">
+        <p>A C program consists of:</p>
+        <ul>
+            <li><b>Preprocessor Directives</b>: Instructions like <code>#include</code>.</li>
+            <li><b>Main Function</b>: <code>int main()</code> where execution starts.</li>
+            <li><b>Variables and Data Types</b>: Used to store values.</li>
+            <li><b>Functions</b>: Blocks of reusable code.</li>
+            <li><b>Statements and Expressions</b>: Instructions for computation.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+        #include &lt;stdio.h&gt;
+
+        int main() {
+            printf("Hello, World!");
+            return 0;
+        }
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>4. What are Data Types in C?</h2>
+    <div class="answer">
+        <p>Data types define the type of data stored in a variable.</p>
+        <ul>
+            <li><b>int</b>: Integer numbers (e.g., 10, -5).</li>
+            <li><b>float</b>: Decimal numbers (e.g., 3.14, -0.99).</li>
+            <li><b>char</b>: Single character (e.g., 'A', '5').</li>
+            <li><b>double</b>: Larger decimal numbers.</li>
+            <li><b>void</b>: No value (used for functions).</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+        int age = 18;
+        float price = 99.99;
+        char grade = 'A';
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>5. What are Operators in C?</h2>
+    <div class="answer">
+        <p>Operators perform operations on variables and values.</p>
+        <ul>
+            <li><b>Arithmetic Operators</b>: +, -, *, /, %</li>
+            <li><b>Relational Operators</b>: ==, !=, &lt;, &gt;, &lt;=, &gt;=</li>
+            <li><b>Logical Operators</b>: &&, ||, !</li>
+            <li><b>Bitwise Operators</b>: &, |, ^, ~, &lt;&lt;, &gt;&gt;</li>
+            <li><b>Assignment Operators</b>: =, +=, -=, *=, /=, %=</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+        int a = 5, b = 2;
+        int sum = a + b;  // 7
+        int isEqual = (a == b);  // 0 (false)
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>6. What are Conditional Statements in C?</h2>
+    <div class="answer">
+        <p>Conditional statements control the flow of a program based on conditions.</p>
+        <ul>
+            <li><b>if</b>: Executes a block if a condition is true.</li>
+            <li><b>if-else</b>: Executes one block if true, another if false.</li>
+            <li><b>else-if</b>: Checks multiple conditions.</li>
+            <li><b>switch-case</b>: Alternative to multiple if-else.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+        int num = 10;
+        if (num &gt; 0) {
+            printf("Positive");
+        } else {
+            printf("Negative");
+        }
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>7. What are Loops in C?</h2>
+    <div class="answer">
+        <p>Loops repeat a block of code multiple times.</p>
+        <ul>
+            <li><b>for Loop</b>: Runs a specific number of times.</li>
+            <li><b>while Loop</b>: Runs while a condition is true.</li>
+            <li><b>do-while Loop</b>: Runs at least once before checking condition.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+        for (int i = 1; i &lt;= 5; i++) {
+            printf("%d ", i);
+        }
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>8. What are Functions in C?</h2>
+    <div class="answer">
+        <p>Functions are reusable blocks of code that perform specific tasks.</p>
+        <p>Types:</p>
+        <ul>
+            <li><b>Built-in Functions</b>: <code>printf()</code>, <code>scanf()</code></li>
+            <li><b>User-defined Functions</b>: Functions created by the programmer.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+        void greet() {
+            printf("Hello, World!");
+        }
+
+        int main() {
+            greet();
+            return 0;
+        }
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>9. What are Arrays in C?</h2>
+    <div class="answer">
+        <p>Arrays store multiple values of the same type.</p>
+        <p>Types:</p>
+        <ul>
+            <li><b>One-dimensional Array</b>: Stores a list of values.</li>
+            <li><b>Multi-dimensional Array</b>: Stores a matrix-like structure.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+        int numbers[5] = {1, 2, 3, 4, 5};
+        printf("%d", numbers[0]); // Output: 1
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>10. What is Pointer in C?</h2><p>Grade 12</p>
+    <div class="answer">
+        <p>A pointer is a variable that stores the memory address of another variable.</p>
+        <p>Example:</p>
+        <pre>
+        int x = 10;
+        int *ptr = &x;
+        printf("%d", *ptr); // Output: 10
+        </pre>
+    </div>
+</div>
+
+<div class="question">
+    <h2>11. What is File Handling in C?</h2> <p>Grade 12</p>
+    <div class="answer">
+        <p>File handling allows reading and writing data to files.</p>
+        <p>Example:</p>
+        <pre>
+        FILE *fptr;
+        fptr = fopen("test.txt", "w");
+        fprintf(fptr, "Hello, C!");
+        fclose(fptr);
+        </pre>
+    </div>
+</div>
+
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

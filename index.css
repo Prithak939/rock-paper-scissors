@@ -1,0 +1,143 @@
+/* Reset and base font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0fdfc;
+  color: #2c3e50;
+}
+
+/* Layout */
+#main {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* TOC - Sidebar */
+#TOC {
+  width: 25%;
+  background: linear-gradient(to bottom, #d7f9f3, #b2f0e8);
+  padding: 25px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 3px solid #00bfa5;
+}
+
+/* TOC heading */
+#TOC h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00695c;
+  font-size: 24px;
+}
+
+/* List styling */
+#tocul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tocul > li {
+  margin-bottom: 18px;
+}
+
+/* Chapter links */
+#tocul > li > a {
+  display: block;
+  background-color: #a5f2e0;
+  padding: 12px 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #004d40;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#tocul > li > a:hover {
+  background-color: #00ccb5;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Subtopic links */
+#tocul li ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+#tocul li ul li a {
+  display: block;
+  background-color: #d1faff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #006064;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+#tocul li ul li a:hover {
+  background-color: #4dd0e1;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Right side - Course Details */
+#details {
+  width: 75%;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+#details h1 {
+  font-size: 30px;
+  color: #1e3d59;
+  margin-bottom: 20px;
+}
+
+#details h2 {
+  margin-top: 30px;
+  color: #157c74;
+  font-size: 24px;
+}
+
+#details h3 {
+  margin-top: 20px;
+  color: #288d8d;
+  font-size: 20px;
+}
+
+#details p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#details ol {
+  padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #TOC,
+  #details {
+    width: 100%;
+    height: auto;
+  }
+
+  #TOC {
+    position: relative;
+    border-right: none;
+    box-shadow: none;
+  }
+}

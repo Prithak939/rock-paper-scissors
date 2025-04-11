@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Society and Cyber Ethics</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <style>
+      /* Base styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+/* TOC container styles */
+#TOC {
+  background-color: #e0f7fa;
+  border: 2px solid #00acc1;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  margin: 30px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* TOC heading */
+#TOC h2 {
+  color: #006064;
+  margin-top: 0;
+}
+
+/* Top-level list */
+#TOC ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Chapters */
+#TOC > ul > li {
+  margin-bottom: 15px;
+}
+
+/* Chapter links */
+#TOC > ul > li > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #004d40;
+  display: block;
+  padding: 10px;
+  background-color: #b2ebf2;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#TOC > ul > li > a:hover {
+  background-color: #4dd0e1;
+}
+
+/* Subtopic list inside each chapter */
+#TOC li ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+/* Subtopic links */
+#TOC li ul li a {
+  text-decoration: none;
+  color: #00695c;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+#TOC li ul li a:hover {
+  background-color: #80deea;
+}
+
+    </style>
+    <div id="main">
+      <div id="TOC">
+        <h2>Topics</h2>
+      
+        <ul>
+          <li><a href="syllabus.html">Home</a></li>
+          <li>
+            <a href="#digital-society">Digital Society and Computer Ethics</a>
+          </li>
+          <li>
+            <a href="#information-security">Concept of Information Security</a>
+          </li>
+          <li><a href="#cybercrime">Concept of Cybercrime</a></li>
+          <li><a href="#malware-spam">Malicious Software and Spam</a></li>
+          <li><a href="#protection">Protection from Cybercrime</a></li>
+          <li><a href="#ip-rights">Intellectual Property Rights</a></li>
+          <li><a href="#digital-signature">Concept of Digital Signature</a></li>
+          <li><a href="#cyber-law-nepal">Concept of Cyber Law in Nepal</a></li>
+          <li><a href="#ict-policy">ICT Policy in Nepal</a></li>
+        </ul>
+      </div>
+
+      <div id="details">
+        <!-- Section 8.1 -->
+        <section id="digital-society">
+          <h2>Digital Society and Computer Ethics</h2>
+          <p>
+            A <strong>digital society</strong> is a society where digital technologies like the internet, smartphones, and computers are deeply integrated into everyday life. It impacts how we communicate, work, learn, and entertain ourselves. The rise of digital technologies has transformed traditional systems, enabling faster communication, remote work, and access to vast amounts of information. However, it also brings challenges like privacy concerns, digital divide, and cybercrime.
+          </p>
+    
+          <h3>Challenges of Digital Society</h3>
+          <ul>
+            <li><strong>Privacy Concerns</strong>: Personal data is often collected and misused by companies and hackers. For example, social media platforms collect user data for targeted advertising, which can lead to privacy violations.</li>
+            <li><strong>Digital Divide</strong>: Inequality in access to technology creates a gap between those who have access to digital tools and those who do not. Rural areas and low-income groups often lack access to high-speed internet and modern devices.</li>
+            <li><strong>Cybercrime</strong>: The increasing reliance on digital systems has led to a rise in cybercrime, including hacking, phishing, and identity theft.</li>
+            <li><strong>Misinformation</strong>: The spread of fake news and propaganda on digital platforms can manipulate public opinion and cause social unrest.</li>
+          </ul>
+    
+          <h3>Computer Ethics</h3>
+          <p>
+            <strong>Computer ethics</strong> involves the ethical use of technology, ensuring it benefits society without causing harm. It includes respecting privacy, avoiding harm, and promoting fairness. Computer ethics is crucial in guiding the development and use of technology to ensure it aligns with societal values.
+          </p>
+    
+          <h3>Commandments of Computer Ethics</h3>
+          <ul>
+            <li><strong>Do not use a computer to harm others</strong>: Avoid using technology to cause physical, emotional, or financial harm to others.</li>
+            <li><strong>Do not interfere with others' computer work</strong>: Respect others' digital activities and avoid disrupting their work.</li>
+            <li><strong>Do not snoop around in others' files</strong>: Respect privacy and avoid unauthorized access to others' data.</li>
+            <li><strong>Do not use a computer to steal</strong>: Avoid using technology for theft, such as hacking into bank accounts.</li>
+            <li><strong>Do not use a computer to bear false witness</strong>: Avoid spreading false information or using technology to deceive others.</li>
+            <li><strong>Do not use or copy software without paying for it</strong>: Respect intellectual property rights and avoid software piracy.</li>
+            <li><strong>Do not use others' computer resources without authorization</strong>: Avoid using others' devices or networks without permission.</li>
+            <li><strong>Do not appropriate others' intellectual output</strong>: Give credit to creators and avoid plagiarism.</li>
+            <li><strong>Think about the social consequences of the program you write</strong>: Consider how your software or technology impacts society.</li>
+            <li><strong>Use a computer in ways that show consideration and respect</strong>: Use technology responsibly and ethically.</li>
+          </ul>
+        </section>
+    
+        <!-- Information Security -->
+        <section id="information-security">
+          <h2>Concept of Information Security</h2>
+          <p>
+            <strong>Information security</strong> involves protecting data and information systems from unauthorized access, use, disclosure, disruption, or destruction. It ensures the confidentiality, integrity, and availability of information. Information security is critical for individuals, businesses, and governments to protect sensitive data from cyber threats.
+          </p>
+    
+          <h3>Information Security Principles</h3>
+          <ul>
+            <li><strong>Confidentiality</strong>: Ensuring data is accessible only to authorized users. For example, encrypting sensitive emails to prevent unauthorized access.</li>
+            <li><strong>Integrity</strong>: Maintaining the accuracy and consistency of data. For example, using checksums to detect data tampering.</li>
+            <li><strong>Availability</strong>: Ensuring data is accessible when needed. For example, using backup systems to recover data after a cyberattack.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: A bank uses encryption to protect customer data during online transactions, ensuring confidentiality and integrity.
+          </div>
+        </section>
+    
+        <!-- Cybercrime -->
+        <section id="cybercrime">
+          <h2>Concept of Cybercrime</h2>
+          <p>
+            <strong>Cybercrime</strong> refers to criminal activities carried out using computers or the internet. It includes hacking, phishing, identity theft, and spreading malware. Cybercriminals target individuals, organizations, and governments for financial gain or to cause disruption.
+          </p>
+    
+          <h3>Types of Cybercrime</h3>
+          <ul>
+            <li><strong>Hacking</strong>:
+              <ul>
+                <li><strong>White Hat</strong>: Ethical hacking to improve security. For example, penetration testers identify vulnerabilities in systems.</li>
+                <li><strong>Black Hat</strong>: Malicious hacking for personal gain. For example, stealing credit card information.</li>
+                <strong>Gray Hat</strong>: Hacking without malicious intent but without permission. For example, exposing security flaws without authorization.</li>
+              </ul>
+            </li>
+            <li><strong>Cyber Terrorism</strong>: Using the internet to conduct terrorist activities. For example, hacking into government systems to cause chaos.</li>
+            <li><strong>Phishing</strong>: Fraudulent attempts to steal sensitive information. For example, sending fake emails pretending to be from a bank.</li>
+            <li><strong>Software Piracy</strong>: Illegal copying and distribution of software. For example, downloading cracked versions of paid software.</li>
+            <li><strong>Cyberbullying</strong>: Harassment or bullying using digital platforms. For example, sending threatening messages on social media.</li>
+            <li><strong>DDoS Attacks</strong>: Overloading a server to make it unavailable. For example, flooding a website with traffic to crash it.</li>
+            <li><strong>Spoofing</strong>: Pretending to be someone else to gain access. For example, faking an email address to trick someone.</li>
+            <li><strong>Sniffing</strong>: Intercepting and monitoring network traffic. For example, capturing passwords sent over an unsecured network.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: A phishing email pretending to be from a bank asks for login credentials, leading to identity theft.
+          </div>
+        </section>
+    
+        <!-- Malicious Software and Spam -->
+        <section id="malware-spam">
+          <h2>Malicious Software and Spam</h2>
+          <p>
+            <strong>Malicious software (malware)</strong> includes viruses, worms, trojans, and ransomware designed to harm or exploit systems. <strong>Spam</strong> refers to unsolicited messages, often sent in bulk, typically for advertising or phishing purposes.
+          </p>
+    
+          <h3>Types of Malware</h3>
+          <ul>
+            <li><strong>Computer Virus</strong>: Spreads by attaching to files and replicating. For example, a virus that corrupts files on a computer.</li>
+            <li><strong>Worms</strong>: Self-replicating malware that spreads over networks. For example, the WannaCry worm that infected thousands of computers worldwide.</li>
+            <li><strong>Trojan Horse</strong>: Disguises itself as legitimate software to gain access. For example, a fake game installer that installs malware.</li>
+            <li><strong>Spyware</strong>: Secretly monitors user activity. For example, keyloggers that capture keystrokes to steal passwords.</li>
+            <li><strong>Adware</strong>: Displays unwanted advertisements. For example, pop-up ads that appear on a browser.</li>
+            <li><strong>Ransomware</strong>: Locks systems until a ransom is paid. For example, the Locky ransomware that encrypted files and demanded payment.</li>
+            <li><strong>Rootkit</strong>: Grants unauthorized access while hiding its presence. For example, a rootkit that allows hackers to control a system remotely.</li>
+          </ul>
+    
+          <h3>Symptoms of Malware</h3>
+          <ul>
+            <li>Slow system performance.</li>
+            <li>Unexpected pop-ups or ads.</li>
+            <li>Files being deleted or corrupted.</li>
+            <li>Unusual network activity.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: A ransomware attack locks a hospital's systems, demanding payment to restore access.
+          </div>
+        </section>
+    
+        <!-- Protection from Cybercrime -->
+        <section id="protection">
+          <h2>Protection from Cybercrime</h2>
+          <p>
+            Protecting yourself from cybercrime involves using strong passwords, keeping software updated, and being cautious online. Tools like antivirus software, firewalls, and encryption can also help.
+          </p>
+    
+          <h3>Best Practices</h3>
+          <ul>
+            <li><strong>Use strong, unique passwords</strong>: Avoid using common passwords like "123456" or "password."</li>
+            <li><strong>Enable two-factor authentication (2FA)</strong>: Adds an extra layer of security by requiring a second form of verification.</li>
+            <li><strong>Avoid clicking on suspicious links</strong>: Be cautious of emails or messages from unknown sources.</li>
+            <li><strong>Regularly update software</strong>: Install updates to patch vulnerabilities.</li>
+            <li><strong>Use antivirus and anti-malware software</strong>: Protects against malware and other threats.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: A company trains employees to recognize phishing emails to prevent data breaches.
+          </div>
+        </section>
+    
+        <!-- Intellectual Property Rights -->
+        <section id="ip-rights">
+          <h2>Intellectual Property Rights</h2>
+          <p>
+            <strong>Intellectual Property Rights (IPR)</strong> protect creations of the mind, such as inventions, literary works, and designs. They ensure creators receive recognition and financial benefits for their work.
+          </p>
+    
+          <h3>Types of Intellectual Property Rights</h3>
+          <ul>
+            <li><strong>Copyright</strong>: Protects literary and artistic works. For example, books, music, and movies.</li>
+            <li><strong>Patents</strong>: Protect inventions and innovations. For example, a new technology or product.</li>
+            <li><strong>Trademarks</strong>: Protect brand names and logos. For example, the Nike logo or Coca-Cola brand.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: A musician copyrights their song to prevent unauthorized use.
+          </div>
+        </section>
+    
+        <!-- Digital Signature -->
+        <section id="digital-signature">
+          <h2>Concept of Digital Signature</h2>
+          <p>
+            A <strong>digital signature</strong> is a cryptographic tool used to verify the authenticity and integrity of digital documents. It ensures that a document has not been altered and confirms the identity of the sender.
+          </p>
+    
+          <h3>Working Mechanism of Digital Signature</h3>
+          <ul>
+            <li>A unique digital fingerprint is created for the document.</li>
+            <li>The fingerprint is encrypted using the sender's private key.</li>
+            <li>The recipient decrypts it using the sender's public key to verify authenticity.</li>
+          </ul>
+    
+          <h3>Advantages of Digital Signature</h3>
+          <ul>
+            <li>Ensures document authenticity and integrity.</li>
+            <li>Reduces the risk of forgery.</li>
+            <li>Saves time and resources compared to physical signatures.</li>
+          </ul>
+    
+          <h3>Disadvantages of Digital Signature</h3>
+          <ul>
+            <li>Requires technical knowledge to implement.</li>
+            <li>Dependent on the security of the private key.</li>
+            <li>Legal recognition may vary by country.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: A business signs a contract digitally to ensure its authenticity.
+          </div>
+        </section>
+    
+        <!-- Cyber Law in Nepal -->
+        <section id="cyber-law-nepal">
+          <h2>Concept of Cyber Law in Nepal</h2>
+          <p>
+            <strong>Cyber law</strong> in Nepal refers to the legal framework governing the use of the internet and digital technologies. It addresses issues like cybercrime, data protection, and electronic transactions.
+          </p>
+    
+          <h3>Areas of Cyber Law</h3>
+          <ul>
+            <li><strong>Cybercrime prevention and punishment</strong>: Laws to combat hacking, phishing, and other cyber offenses.</li>
+            <li><strong>Data protection and privacy</strong>: Regulations to protect personal data from misuse.</li>
+            <li><strong>Regulation of electronic transactions</strong>: Laws to govern online transactions and digital signatures.</li>
+          </ul>
+    
+          <h3>Important Cyber Laws in Nepal</h3>
+          <ul>
+            <li><strong>Electronic Transactions Act (2008)</strong>: Regulates online transactions and digital signatures.</li>
+            <li><strong>Cybercrime Laws</strong>: Address hacking, data theft, and other cyber offenses.</li>
+          </ul>
+    
+          <h3>Punishment for Cyber Crimes in Nepal</h3>
+          <ul>
+            <li><strong>Hacking</strong>: Up to 5 years imprisonment or a fine.</li>
+            <li><strong>Identity theft</strong>: Up to 3 years imprisonment or a fine.</li>
+            <li><strong>Spreading malware</strong>: Up to 2 years imprisonment or a fine.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: A hacker is prosecuted under Nepal’s cybercrime laws for stealing sensitive data.
+          </div>
+        </section>
+    
+        <!-- ICT Policy in Nepal -->
+        <section id="ict-policy">
+          <h2>ICT Policy in Nepal</h2>
+          <p>
+            The <strong>ICT Policy</strong> in Nepal aims to promote the development and use of information and communication technologies to drive economic growth and improve public services.
+          </p>
+    
+          <h3>ICT Policy 2072</h3>
+          <p>
+            The ICT Policy 2072 focuses on expanding internet access, promoting digital literacy, and encouraging innovation in the tech sector.
+          </p>
+    
+          <h3>Strategies of ICT Policy 2072</h3>
+          <ul>
+            <li><strong>Expand internet access to rural areas</strong>: Bridging the digital divide by providing affordable internet.</li>
+            <li><strong>Promote digital literacy and skills development</strong>: Training programs to improve digital skills.</li>
+            <li><strong>Encourage innovation and entrepreneurship in the tech sector</strong>: Supporting startups and tech-based businesses.</li>
+          </ul>
+    
+          <div class="example">
+            <strong>Example</strong>: The government launches a program to provide free Wi-Fi in public spaces.
+          </div>
+        </section>
+        <h1>Cyber Security - Basic Concepts</h1>
+
+<div class="question">
+    <h2>1. What is Cyber Security?</h2>
+    <div class="answer">
+        <p>Cyber Security is the practice of protecting computer systems, networks, and data from cyber threats, attacks, and unauthorized access.</p>
+    </div>
+</div>
+
+<div class="question">
+    <h2>2. What are the main threats in cyber security?</h2>
+    <div class="answer">
+        <p>Common cyber threats include:</p>
+        <ul>
+            <li><b>Malware</b>: Harmful software such as viruses, worms, and ransomware.</li>
+            <li><b>Phishing</b>: Fraudulent attempts to obtain sensitive information.</li>
+            <li><b>Denial of Service (DoS) Attacks</b>: Overloading a system to make it unavailable.</li>
+            <li><b>Man-in-the-Middle (MITM) Attacks</b>: Intercepting communication between two parties.</li>
+            <li><b>SQL Injection</b>: Injecting malicious code into a database.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>3. What are the principles of cyber security?</h2>
+    <div class="answer">
+        <p>Cyber security follows key principles such as:</p>
+        <ul>
+            <li><b>Confidentiality</b>: Protecting information from unauthorized access.</li>
+            <li><b>Integrity</b>: Ensuring data accuracy and reliability.</li>
+            <li><b>Availability</b>: Ensuring resources are accessible when needed.</li>
+            <li><b>Authentication</b>: Verifying the identity of users.</li>
+            <li><b>Non-Repudiation</b>: Preventing denial of actions performed.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>4. What are common security measures?</h2>
+    <div class="answer">
+        <p>Some important security measures include:</p>
+        <ul>
+            <li><b>Firewalls</b>: Blocking unauthorized access to networks.</li>
+            <li><b>Antivirus Software</b>: Detecting and removing malware.</li>
+            <li><b>Encryption</b>: Securing data through encoding.</li>
+            <li><b>Strong Passwords</b>: Using complex passwords for protection.</li>
+            <li><b>Multi-Factor Authentication (MFA)</b>: Adding an extra layer of security.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>5. What is ethical hacking?</h2>
+    <div class="answer">
+        <p>Ethical hacking is legally testing and improving security systems to identify vulnerabilities and prevent attacks.</p>
+        <p>Types of hackers:</p>
+        <ul>
+            <li><b>White Hat Hackers</b>: Ethical hackers who help organizations.</li>
+            <li><b>Black Hat Hackers</b>: Malicious hackers who exploit systems.</li>
+            <li><b>Gray Hat Hackers</b>: Hackers who operate between legal and illegal practices.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>6. What is social engineering?</h2>
+    <div class="answer">
+        <p>Social engineering is manipulating people into divulging confidential information.</p>
+        <p>Common techniques:</p>
+        <ul>
+            <li><b>Phishing</b>: Fake emails or websites to steal credentials.</li>
+            <li><b>Pretexting</b>: Impersonating someone to gain trust.</li>
+            <li><b>Baiting</b>: Offering fake rewards to trick users.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>7. What is a VPN?</h2>
+    <div class="answer">
+        <p>A Virtual Private Network (VPN) encrypts internet connections to enhance privacy and security, protecting user data from hackers.</p>
+    </div>
+</div>
+
+<div class="question">
+    <h2>8. What is data encryption?</h2>
+    <div class="answer">
+        <p>Data encryption is the process of converting data into a coded format that can only be accessed with a decryption key.</p>
+        <p>Types of encryption:</p>
+        <ul>
+            <li><b>Symmetric Encryption</b>: Same key for encryption and decryption.</li>
+            <li><b>Asymmetric Encryption</b>: Uses a public and private key pair.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>9. What are cyber laws?</h2>
+    <div class="answer">
+        <p>Cyber laws are regulations designed to protect digital systems and users from cybercrimes.</p>
+        <p>Examples:</p>
+        <ul>
+            <li><b>Data Protection Laws</b>: Secure personal information.</li>
+            <li><b>Computer Fraud and Abuse Act (CFAA)</b>: Prevents unauthorized access to systems.</li>
+            <li><b>Cybercrime Prevention Act</b>: Punishes hacking and other cyber offenses.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="question">
+    <h2>10. What is the future of cyber security?</h2>
+    <div class="answer">
+        <p>Cyber security continues to evolve with new technologies such as:</p>
+        <ul>
+            <li><b>Artificial Intelligence (AI)</b>: Automated threat detection.</li>
+            <li><b>Blockchain</b>: Secure and transparent digital transactions.</li>
+            <li><b>Quantum Computing</b>: Advancements in encryption and security.</li>
+        </ul>
+    </div>
+</div>
+
+
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
